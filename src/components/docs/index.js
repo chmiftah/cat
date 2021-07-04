@@ -94,9 +94,10 @@ export default function Docs() {
       <section className="px-3 md:px-8 my-16">
         <h2 className="text-2xl font-medium">File Structure explained</h2>
         <p className="mt-5">
-          We will focus on <strong>dashboard</strong> folder and its
-          <strong className="pl-1">subfolders</strong> which contain all the
-          logic.
+          We will focus on<span className="px-1 font-medium">dashboard</span>
+          folder and its
+          <span className="px-1 font-medium">subfolders</span> which contain all
+          the logic.
         </p>
 
         <div className="mt-5 mb-12">
@@ -108,10 +109,10 @@ export default function Docs() {
             <span className="px-2 font-medium">context.js</span> :
             <p className="pl-2">
               contains the
-              <strong className="px-1">DashboardProvider</strong>component where
-              all the dashboard logic is placed. this will then be reused in
-              other components. it handles the closing of the sidenav when the
-              route changes or on click outside.
+              <span className="px-1 font-medium">DashboardProvider</span>
+              component where all the dashboard logic is placed. this will then
+              be reused in other components. it handles the closing of the
+              sidenav when the route changes or on click outside.
             </p>
           </div>
           <div className="flex flex-wrap md:flex-nowrap pl-6 mt-6">
@@ -132,11 +133,12 @@ export default function Docs() {
             <FolderIcon className="h-7 w-7" />
             <span className="px-2 font-medium">icons</span> :
             <p className="pl-1">
-              As each <strong>sidenav-item</strong> has an icon, this sub-folder
-              contains the icons of each sidenav-item. You don't need this
-              folder if you are using a package for icons such as
-              <strong className="px-1">react-icons</strong>,
-              <strong className="px-1">font-awesome</strong>
+              As each <span className="px-1 font-medium">sidenav-item</span> has
+              an icon, this sub-folder contains the icons of each sidenav-item.
+              You don't need this folder if you are using a package for icons
+              such as
+              <span className="px-1 font-medium">react-icons</span>,
+              <span className="px-1 font-medium">font-awesome</span>
               or other
             </p>
           </div>
@@ -169,24 +171,25 @@ export default function Docs() {
           <div className="flex flex-wrap md:flex-nowrap pl-6 mt-10">
             <JsIcon /> <span className="px-2 font-medium">header.js</span> :
             <p className="pl-1">
-              The<strong className="px-1">SidenavHeader</strong>component
-              contains the logo that is displayed on top of the sidenav
+              The<span className="px-1 font-medium">SidenavHeader</span>
+              component contains the logo that is displayed on top of the
+              sidenav
             </p>
           </div>
           <div className="flex flex-wrap md:flex-nowrap pl-6 mt-6">
             <JsIcon /> <span className="px-2 font-medium">items.js</span> :
             <p className="pl-1">
-              This<strong className="px-1">SidenavItems</strong>component
-              automatically generates each sidenav-item according to your routes
-              coming from the
-              <strong className="px-1">data.js</strong>file
+              This<span className="px-1 font-medium">SidenavItems</span>
+              component automatically generates each sidenav-item according to
+              your routes coming from the
+              <span className="px-1 font-medium">data.js</span>file
             </p>
           </div>
           <div className="flex flex-wrap md:flex-nowrap pl-6 mt-6">
             <JsIcon /> <span className="px-2 font-medium">index.js</span> :
             <p className="pl-1">
-              This <strong>Sidenavigation</strong> component contains all the
-              logic of the sidenav.
+              This <span className="px-1 font-medium">Sidenavigation</span>{' '}
+              component contains all the logic of the sidenav.
             </p>
           </div>
           <div className="flex flex-wrap md:flex-nowrap pl-6 mt-6">
@@ -207,9 +210,9 @@ export default function Docs() {
             <JsIcon /> <span className="px-2 font-medium">index.js</span> :
             <p className="pl-1">
               Contains the
-              <strong className="px-1">Topnavigation</strong>component. You can
-              customize it or replace it with your own navbar but don't forget
-              to add a button to toggle sidenav on mobile
+              <span className="px-1 font-medium">Topnavigation</span>component.
+              You can customize it or replace it with your own navbar but don't
+              forget to add a button to toggle sidenav on mobile
             </p>
           </div>
         </div>
@@ -217,7 +220,7 @@ export default function Docs() {
         <div>
           <div className="flex flex-wrap md:flex-nowrap mt-8">
             <JsIcon /> <strong className="px-1">layout.js :</strong> Contains
-            the<strong className="px-1">DashboardLayout</strong>
+            the<span className="px-1 font-medium">DashboardLayout</span>
             component used as the layout of the application
           </div>
         </div>
@@ -228,18 +231,21 @@ export default function Docs() {
         <ul className="pl-6 list-disc mt-4">
           <li className="mb-3">
             Add your routes in the
-            <strong className="px-1">dashboard/sidenavigation/data.js</strong>
+            <span className="px-1 font-medium">
+              dashboard/sidenavigation/data.js
+            </span>
             file
           </li>
           <li className="mb-3">
             If your routes don't exist yet, create your routes in the
-            <strong className="px-1">pages</strong>directory
+            <span className="px-1 font-medium">pages</span>directory
           </li>
           <li className="mb-3">
-            Wrap your routes in <strong>App.js</strong> by the
-            <strong className="px-1">DashboardLayout</strong>component imported
-            from
-            <strong className="px-1">dashboard/layout.js</strong>
+            Wrap your routes in<span className="px-1 font-medium">App.js</span>
+            by the
+            <span className="px-1 font-medium">DashboardLayout</span>component
+            imported from
+            <span className="px-1 font-medium">dashboard/layout.js</span>
           </li>
         </ul>
       </section>
@@ -247,13 +253,15 @@ export default function Docs() {
       <section className="px-3 md:px-8 my-16">
         <h2 className="text-2xl font-medium">Auto Format and Linting</h2>
         <div className="mt-4">
-          The dashboard is provided with <strong>eslint</strong>,
-          <strong className="px-1">prettier</strong>,
-          <strong className="px-1">lint-staged</strong>et
-          <strong className="px-1">husky.</strong>Before each commit, the
-          <strong className="px-1">pre-commit</strong>hook will be triggered to
-          run prettier to format the code and eslint to analyze the code for
-          possible errors.
+          The dashboard is provided with
+          <span className="pl-1 font-medium">eslint</span>,
+          <span className="px-1 font-medium">prettier</span>,
+          <span className="px-1 font-medium">lint-staged</span>et
+          <span className="px-1 font-medium">husky.</span>Before each commit,
+          the
+          <span className="px-1 font-medium">pre-commit</span>hook will be
+          triggered to run prettier to format the code and eslint to analyze the
+          code for possible errors.
         </div>
       </section>
 
@@ -262,19 +270,23 @@ export default function Docs() {
         <p className="mt-4">
           As there is no vendor lock-in, if you already have a dashboard, you
           can just copy the
-          <strong className="px-1">dashboard</strong>folder into your project
+          <span className="px-1 font-medium">dashboard</span>folder into your
+          project
         </p>
         <div className="mt-8">
           <ul className="pl-6 list-disc mt-4">
             <li className="mb-3">
               Add your routes in the
-              <strong className="px-1">dashboard/sidenavigation/data.js</strong>
+              <span className="px-1 font-medium">
+                dashboard/sidenavigation/data.js
+              </span>
               file
             </li>
             <li className="mb-3">
               Replace your layout by the
-              <strong className="px-1">DashboardLayout</strong> imported from
-              <strong className="px-1">dashboard/layout.js</strong>
+              <span className="px-1 font-medium">DashboardLayout</span> imported
+              from
+              <span className="px-1 font-medium">dashboard/layout.js</span>
             </li>
           </ul>
         </div>
@@ -291,13 +303,15 @@ export default function Docs() {
           The sidenav scrollbar is hidden by default but you can still scroll
           with the keyboards if you have several sidenav-items. If you are not a
           fan of this approach, you can always change its style in the
-          <strong className="px-1">index.module.css</strong>file
+          <span className="px-1 font-medium">index.module.css</span>file
         </p>
         <p className="mt-5">
-          In the <strong> dashboard/layout.js</strong> file, the
-          <strong className="pl-1">Sidenavigation</strong> component has as prop
-          <strong className="pl-1">mobilePosition</strong>, which indicates the
-          positioning of the sidenav on mobile.
+          In the<span className="px-1 font-medium">dashboard/layout.js</span>
+          file, the
+          <span className="px-1 font-medium">Sidenavigation</span>component has
+          as prop
+          <span className="pl-1 font-medium">mobilePosition</span>, which
+          indicates the positioning of the sidenav on mobile.
         </p>
         <p className="pt-5">This prop can have two possible values :</p>
         <ul className="pl-6 mt-4 list-disc">
