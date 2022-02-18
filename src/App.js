@@ -1,46 +1,57 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages';
-import BillsPage from './pages/admin/bills';
 import DashboardLayout from './dashboard/layout';
-import SettingsPage from './pages/admin/settings';
-import AnalyticsPage from './pages/admin/analytics';
-import MonitoringPage from './pages/admin/monitoring';
-import ApplicationsPage from './pages/admin/applications';
-import DocumentationPage from './pages/admin/documentation';
-import DemographicDataPage from './pages/admin/demographic-data';
+import MateriText from './pages/skd/materi/MateriText';
+import MateriVideo from './pages/skd/materi/MateriVideo';
+import Tryout from './pages/skd/tryout/Tryout';
+import Hasil from './pages/skd/tryout/Hasil-tryout';
+import TryoutTes from './pages/skd/tryout/TryoutTes';
+import HasilId from './pages/skd/tryout/Hasil';
+import Home from './pages/Home';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 
 function App() {
   return (
     <Router>
-      <DashboardLayout>
+  
+     
+    
+  
         <Switch>
-          <Route exact path="/">
-            <HomePage />
+
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <DashboardLayout>
+          <Route exact path="/skd/materi-teks">
+            <MateriText />
           </Route>
-          <Route exact path="/admin/analytics">
-            <AnalyticsPage />
+  
+          <Route exact path="/skd/materi-videos">
+            <MateriVideo />
           </Route>
-          <Route exact path="/admin/applications">
-            <ApplicationsPage />
+
+          <Route exact path="/tryout">
+            <Tryout />
           </Route>
-          <Route exact path="/admin/bills">
-            <BillsPage />
+
+          <Route exact path="/skd/hasil-tryout">
+            <Hasil />
           </Route>
-          <Route exact path="/admin/demographics">
-            <DemographicDataPage />
+
+
+          <Route exact path="/tryout/:id">
+            <TryoutTes />
           </Route>
-          <Route exact path="/admin/documentation">
-            <DocumentationPage />
+
+          <Route exact path="/skd/hasil-tryout/:id">
+            <HasilId />
           </Route>
-          <Route exact path="/admin/monitoring">
-            <MonitoringPage />
-          </Route>
-          <Route exact path="/admin/settings">
-            <SettingsPage />
-          </Route>
+          </DashboardLayout>
         </Switch>
-      </DashboardLayout>
+   
     </Router>
   );
 }

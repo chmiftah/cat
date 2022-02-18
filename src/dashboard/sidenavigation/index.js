@@ -8,10 +8,10 @@ const style = {
     left: 'left-0 ',
     right: 'right-0 lg:left-0',
   },
-  container: `pb-32 lg:pb-12`,
-  close: `duration-700 ease-out hidden transition-all lg:w-24`,
-  default: `bg-black h-screen overflow-y-auto top-0 lg:absolute lg:block lg:z-40`,
-  open: `absolute duration-500 ease-in transition-all w-8/12 z-40 sm:w-5/12 md:w-64`,
+  container: `pb-32 lg:pb-12 `,
+  close: `duration-700 ease-out hidden transition-all lg:w-24 md:hidden`,
+  default: `bg-white order shadow-2xl h-screen overflow-y-auto top-0 lg:block md:block block  `,
+  open: `duration-500 ease-in transition-all w-64 z-40 sm:w-6/12 md:w-64 absolute lg:relative`,
 };
 
 export default function SideNavigation({ mobilePosition }) {
@@ -24,7 +24,7 @@ export default function SideNavigation({ mobilePosition }) {
     >
       <div className={style.container}>
         <SidenavHeader />
-        <SidenavItems />
+        <SidenavItems  />
       </div>
     </aside>
   );
